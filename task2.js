@@ -1,37 +1,9 @@
-var n = parseInt(prompt("Please Enter Number to find its Factorial!:", 9));
-var factorial = factor(n);
+var rWidth = parseInt(prompt("Please Enter Width of the Rectangle:", 4));
+var rHeight = parseInt(prompt("Please Enter Height of the Rectangle:", 3));
 
-//Option 1: Code avaiable in JS PP Slides
-function factor(n)
-{
-    if(n<=1)
-    {
-        return 1;
-    }
-    else
-    {
-        return n*factor(n-1);
-    }
+document.write("i)  Arguments passed as values 'area(4, 5)': "+area(4, 5));
+document.write("<br/>ii) Arguments passed as variables 'area(rWidth, rHeight)': "+area(rWidth, rHeight));
+
+function area(width, height){
+    return width*height;
 }
-
-//Option 2: Using Decremental for loop
-/*function factor(n)
-{
-    for(i=n-1;i>1;i--)
-    {
-        n=n*i;
-    }
-    return n;
-}*/
-
-//Option 3: Using Incremental for loop
-/*function factor(n)
-{
-    for(i=2,j=1;i<=n;i++)
-    {
-        j=j*i;
-    }
-    return j;
-}*/
-
-document.write(n+"! = "+factorial);
